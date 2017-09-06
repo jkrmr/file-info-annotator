@@ -4,11 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node index.js"
+    "start": "babel-node index.js",
+    "test": "mocha --compilers js:babel-core/register lib/**/**.spec.js"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
+    "chai": "^4.1.2",
     "fs-extra": "^4.0.1",
+    "mocha": "^3.5.0",
     "pluralize": "^7.0.0"
   },
   "devDependencies": {
