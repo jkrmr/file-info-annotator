@@ -21,10 +21,10 @@ fs.readdir(ORIGINAL_PATH)
       })
 
       return MoveAnnotated.fileWithInfo(fileInfo)
-        .then(() => results.success(originalName))
+        .then(() => results.addSuccess(originalName))
         .catch(error => {
           console.log(error.message)
-          results.failure(originalName)
+          results.addFailure(originalName)
         })
     })
   })
