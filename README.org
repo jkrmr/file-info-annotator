@@ -22,12 +22,21 @@ follows:
 renamed 5 files, with 0 errors
 #+END_SRC
 
-or
+or, for example,
 
 #+BEGIN_SRC shell
 % npm start
 
-renamed 3 files, with 2 errors (file.json, file2.txt)
+ENOENT: no such file or directory, open './files/moved/random-json-list_EDITED_2017-09-07_21-26.json'
+ENOENT: no such file or directory, open './files/moved/random-json-file-two_EDITED_2017-09-07_21-26.json'
+renamed 3 files, with 2 errors (random-json-list.json, random-json-file-two.json)
+#+END_SRC
+
+#+BEGIN_SRC shell
+% npm start
+
+./files/original/anothertext-file.json: Unexpected token h in JSON at position 1
+renamed 4 files, with 1 error (anothertext-file.json)
 #+END_SRC
 
 The script currently handles ~.txt~ and ~.json~ files.
