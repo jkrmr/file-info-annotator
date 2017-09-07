@@ -35,23 +35,23 @@ The script currently handles ~.txt~ and ~.json~ files.
 
 To install dependencies, run ~yarn install~.
 
-- Node 8.4
-- Yarn 0.27.5
-- babel-cli
-- babel-core
-- babel-register
-- fs-extra
-- pluralize
+- [[https://nodejs.org/][Node]] 8.4
+- [[https://github.com/yarnpkg/yarn][yarn]] 0.27.5
+- [[https://github.com/babel/babel/blob/master/packages/babel-cli][babel-cli]]
+- [[https://github.com/babel/babel/blob/master/packages/babel-core][babel-core]]
+- [[https://github.com/babel/babel/blob/master/packages/babel-register][babel-register]]
+- [[https://github.com/jprichardson/node-fs-extra][fs-extra]]
+- [[https://github.com/blakeembrey/pluralize][pluralize]]
 
 ** Testing
 
 Tests are written using the following libraries:
 
-- mocha
-- chai
-- chai-as-promised
-- mock-fs
-- sinon
+- [[https://github.com/mochajs/mocha][mocha]]
+- [[https://github.com/chaijs/chai][chai]]
+- [[https://github.com/domenic/chai-as-promised][chai-as-promised]]
+- [[https://github.com/tschaub/mock-fs][mock-fs]]
+- [[https://github.com/sinonjs/sinon][sinon]]
 
 Run tests from the project root by issuing ~npm test~.
 
