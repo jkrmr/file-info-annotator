@@ -1,0 +1,92 @@
+* DONE file-info-annotator
+  CLOSED: [2017-09-07 Thu 10:33]
+
+A Node.js command-line script that asynchronously reads files from a directory,
+creates an annotated copy in a target directory (renamed with a timestamp).
+
+Each file is annotated with four pieces of information:
+
+1. The name of the source file (e.g. ~file.json~)
+2. The source file's relative path (e.g. ~files/original~)
+3. The name of the annotated target file (e.g. ~file_EDITED_2015-1-1_12-44.json~)
+4. The target file's relative path (e.g. ~files/moved~)
+
+The script can be run with ~npm start~ and outputs the results of the script, as
+follows:
+
+#+BEGIN_SRC shell
+% npm start
+
+renamed 5 files, with 0 errors
+#+END_SRC
+
+or
+
+#+BEGIN_SRC shell
+% npm start
+
+renamed 3 files, with 2 errors (file.json, file2.txt)
+#+END_SRC
+
+The script currently handles ~.txt~ and ~.json~ files.
+
+** Dependencies
+
+To install dependencies, run ~yarn install~.
+
+- Node 8.4
+- Yarn 0.27.5
+- babel-cli
+- fs-extra
+- pluralize
+
+** Testing
+
+Tests are written using the following libraries:
+
+- mocha
+- chai
+- chai-as-promised
+- mock-fs
+- sinon
+
+Run tests from the project root by issuing ~npm test~.
+
+#+BEGIN_SRC shell
+% npm test
+
+  completionMessage
+    ✓ given no errors, pluralizes correctly
+    ✓ given one error, pluralizes correctly
+    ✓ given multiple errors, pluralizes correctly
+    ✓ given no successes, pluralizes correctly
+    ✓ given one success, pluralizes correctly
+    ✓ given multiple successes, pluralizes correctly
+
+  FileInfo
+    ✓ parses original file info
+    ✓ parses target file info
+    ✓ has an object prop with data to be appended to source files
+
+  MoveAnnotated
+    .fileWithInfo
+      ✓ returns txt file handler if given txt extension
+      ✓ returns json file handler if given json extension
+      ✓ raises if given an unrecognized type
+    .txt
+      ✓ writes text from source file, annotated, to target file
+    .json
+      ✓ writes json from source file, annotated, to target file
+
+  Results
+    #success
+      ✓ pushes onto a success stack
+    #failure
+      ✓ pushes onto a failure stack
+
+  #timestamp
+    ✓ returns an appropriately formatted timestamp string
+
+
+  17 passing (76ms)
+#+END_SRC
