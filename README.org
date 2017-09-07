@@ -37,6 +37,8 @@ To install dependencies, run ~yarn install~.
 - Node 8.4
 - Yarn 0.27.5
 - babel-cli
+- babel-core
+- babel-register
 - fs-extra
 - pluralize
 
