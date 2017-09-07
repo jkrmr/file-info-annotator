@@ -2,8 +2,9 @@
 
 [[https://circleci.com/gh/jkrmr/file-info-annotator][https://circleci.com/gh/jkrmr/file-info-annotator.svg?style=svg]]
 
-A Node.js command-line script that asynchronously reads files from a directory,
-creates an annotated copy in a target directory (renamed with a timestamp).
+A Node.js command-line script that asynchronously reads files from a directory
+and creates an annotated copy of each file (renamed with a timestamp) in a given
+target directory.
 
 Each file is annotated with four pieces of information:
 
