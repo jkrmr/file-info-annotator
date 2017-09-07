@@ -73,8 +73,8 @@ Run tests from the project root by issuing ~npm test~.
 
   MoveAnnotated
     .fileWithInfo
-      ✓ returns txt file handler if given txt extension
-      ✓ returns json file handler if given json extension
+      ✓ invokes txt file handler if given txt extension
+      ✓ invokes json file handler if given json extension
       ✓ raises if given an unrecognized type
     .txt
       ✓ writes text from source file, annotated, to target file
@@ -88,8 +88,8 @@ Run tests from the project root by issuing ~npm test~.
       ✓ pushes onto a failure stack
 
   #timestamp
-    ✓ returns an appropriately formatted timestamp string
+    ✓ returns an appropriately formatted timestamp string in UTC
 
 
-  17 passing (76ms)
+  17 passing (81ms)
 #+END_SRC
