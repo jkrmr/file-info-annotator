@@ -13,6 +13,8 @@ Each file is annotated with four pieces of information:
 3. The name of the annotated target file (e.g. ~file_EDITED_2015-1-1_12-44.json~)
 4. The target file's relative path (e.g. ~files/moved~)
 
+** Usage
+
 The script can be run with ~npm start~ and outputs the results of the script, as
 follows:
 
@@ -40,6 +42,14 @@ renamed 4 files, with 1 error (anothertext-file.json)
 #+END_SRC
 
 The script currently handles ~.txt~ and ~.json~ files.
+
+To specify source and target directories, pass the ~--source~ or ~--target~
+flags. Defaults are as follows:
+
+#+BEGIN_SRC
+% npm start -- --source files/original --target files/moved
+% npm start -- -s files/original -t files/moved
+#+END_SRC
 
 ** Dependencies
 
