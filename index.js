@@ -14,7 +14,7 @@ fs.readdir(ORIGINAL_PATH)
   .then(files => {
     return files.map(originalName => {
       const fileInfo = new FileInfo({
-        filepath: ORIGINAL_PATH,
+        sourceDir: ORIGINAL_PATH,
         filename: originalName,
         targetDir: NEW_PATH,
         timestamp: timestamp()
