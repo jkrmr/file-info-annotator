@@ -21,8 +21,11 @@ fs.readdir(ORIGINAL_PATH)
       })
 
       return MoveAnnotated.fileWithInfo(fileInfo)
-        .then(renamedFile => results.success(renamedFile))
-        .catch(failedFile => results.failure(failedFile))
+        .then(() => results.success(originalName))
+        .catch(error => {
+          console.log(error.message)
+          results.failure(originalName)
+        })
     })
   })
   .then(renameOps => Promise.all(renameOps))
